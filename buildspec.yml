@@ -1,0 +1,11 @@
+version: 0.1
+
+phases:
+  pre_build:
+    commands:      
+      - echo *** Pre-Build ***
+      - cp envs/.env.test .env      
+      - composer install --no-interaction     
+artifacts:    
+  files:
+    - '**/*'
